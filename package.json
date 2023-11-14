@@ -1,22 +1,40 @@
 {
-  "name": "@tilliestudios/spa-personal-web-components",
-  "version": "1.13.0",
-  "description": "A collection of web components framework agnostic.",
-  "main": "logo.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "web-components",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/web-components/web-components.esm.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coffeestained/spa-personal-web-components.git"
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
-  "keywords": [
-    "web-components"
+  "files": [
+    "dist/",
+    "loader/"
   ],
-  "author": "tilliestudios",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/coffeestained/spa-personal-web-components/issues"
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
-  "homepage": "https://github.com/coffeestained/spa-personal-web-components#readme"
+  "dependencies": {
+    "@stencil/angular-output-target": "^0.8.3",
+    "@stencil/core": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.6",
+    "@types/node": "^16.18.11",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "puppeteer": "21.1.1"
+  },
+  "license": "MIT"
 }
