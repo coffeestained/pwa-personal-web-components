@@ -1,0 +1,22 @@
+{
+  "name": "@tilliestudios/spa-personal-web-components",
+  "version": "1.0.0",
+  "description": "A collection of web components framework agnostic.",
+  "main": "logo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coffeestained/spa-personal-web-components.git"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "tilliestudios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coffeestained/spa-personal-web-components/issues"
+  },
+  "homepage": "https://github.com/coffeestained/spa-personal-web-components#readme"
+}
