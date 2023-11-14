@@ -1,6 +1,6 @@
 {
   "name": "@tilliestudios/spa-personal-web-components",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "description": "A collection of web components framework agnostic.",
   "main": "logo.js",
   "scripts": {
