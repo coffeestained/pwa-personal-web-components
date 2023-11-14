@@ -1,4 +1,4 @@
-export module Module {
+export module ComponentsModule {
 
   export class Components {
     window?: Window;
