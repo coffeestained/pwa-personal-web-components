@@ -17,7 +17,7 @@ export namespace Components {
         /**
           * The logo style
          */
-        "logoStyle": "short" | "full";
+        "logostyle": "short" | "full";
     }
 }
 declare global {
@@ -50,7 +50,7 @@ declare namespace LocalJSX {
         /**
           * The logo style
          */
-        "logoStyle"?: "short" | "full";
+        "logostyle"?: "short" | "full";
     }
     interface IntrinsicElements {
         "spa-logo": SpaLogo;
