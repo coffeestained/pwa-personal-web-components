@@ -9,11 +9,11 @@ export class SpaTextLogo {
   /**
    * The logo style
    */
-  @Prop() logoStyle: "short" | "full" = "short";
+  @Prop() logostyle: "short" | "full" = "short";
   @Prop() container: "" | "square" = "";
 
   render() {
-    const text = this.logoStyle === "short" ? "ts" : "tillie studios";
+    const text = this.logostyle === "short" ? "ts" : "tillie studios";
     return <span class={this.container}>{text}</span>;
   }
 }
