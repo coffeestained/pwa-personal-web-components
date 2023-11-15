@@ -12,7 +12,7 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
-      dir: "custom-elements/"
+      dir: "dist/custom-elements/"
       // Output target config options here
     },
     {
