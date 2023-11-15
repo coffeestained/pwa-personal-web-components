@@ -13,7 +13,6 @@ export class SpaTextLogo {
   @Prop() container: "" | "square" = "";
 
   render() {
-    const text = this.logostyle === "short" ? "ts" : "tillie studios";
-    return <span class={this.container}>{text}</span>;
+    return <span class={this.container}>{this.logostyle === "short" ? "ts" : "tillie studios"}</span>;
   }
 }
