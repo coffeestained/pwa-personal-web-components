@@ -12,6 +12,13 @@ export namespace Components {
          */
         "src": string;
     }
+    interface SpaTextLogo {
+        "container": "" | "square";
+        /**
+          * The logo style
+         */
+        "logoStyle": "short" | "full";
+    }
 }
 declare global {
     interface HTMLSpaLogoElement extends Components.SpaLogo, HTMLStencilElement {
@@ -20,8 +27,15 @@ declare global {
         prototype: HTMLSpaLogoElement;
         new (): HTMLSpaLogoElement;
     };
+    interface HTMLSpaTextLogoElement extends Components.SpaTextLogo, HTMLStencilElement {
+    }
+    var HTMLSpaTextLogoElement: {
+        prototype: HTMLSpaTextLogoElement;
+        new (): HTMLSpaTextLogoElement;
+    };
     interface HTMLElementTagNameMap {
         "spa-logo": HTMLSpaLogoElement;
+        "spa-text-logo": HTMLSpaTextLogoElement;
     }
 }
 declare namespace LocalJSX {
@@ -31,8 +45,16 @@ declare namespace LocalJSX {
          */
         "src"?: string;
     }
+    interface SpaTextLogo {
+        "container"?: "" | "square";
+        /**
+          * The logo style
+         */
+        "logoStyle"?: "short" | "full";
+    }
     interface IntrinsicElements {
         "spa-logo": SpaLogo;
+        "spa-text-logo": SpaTextLogo;
     }
 }
 export { LocalJSX as JSX };
@@ -40,6 +62,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "spa-logo": LocalJSX.SpaLogo & JSXBase.HTMLAttributes<HTMLSpaLogoElement>;
+            "spa-text-logo": LocalJSX.SpaTextLogo & JSXBase.HTMLAttributes<HTMLSpaTextLogoElement>;
         }
     }
 }

@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  font-family: "Quicksand";
+}
+
+:host .square {
+  padding: 10px 20px;
+}

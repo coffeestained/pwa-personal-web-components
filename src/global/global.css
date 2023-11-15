@@ -1,0 +1,5 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: local('Quicksand[wght]'),
+    url('/assets/Quicksand[wght].ttf') format('truetype');
+  }

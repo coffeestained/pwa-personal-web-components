@@ -4,6 +4,7 @@ import { angularOutputTarget } from '@stencil/angular-output-target';
 
 export const config: Config = {
   namespace: 'web-components',
+  globalStyle: 'src/global/global.css',
   outputTargets: [
     {
       type: 'dist',
@@ -21,6 +22,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      dir: "dist/www"
     },
     // By default, the generated proxy components will
     // leverage the output from the `dist` target, so we
