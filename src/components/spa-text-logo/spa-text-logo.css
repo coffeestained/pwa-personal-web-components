@@ -5,4 +5,5 @@
 
 :host .square {
   padding: 10px 20px;
+  border: 5px solid black;
 }
