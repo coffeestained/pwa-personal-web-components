@@ -12,7 +12,7 @@
   "unpkg": "dist/web-components/web-components.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+    "url": "git+https://github.com/coffeestained/spa-personal-web-components.git"
   },
   "files": [
     "dist/",
