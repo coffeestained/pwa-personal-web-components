@@ -9,5 +9,5 @@
 
 :host .square {
   padding: 5px 8px;
-  border: 3px solid black;
+  border: 3px solid var(--theme-text-color-two, #000);
 }
