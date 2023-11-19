@@ -21,25 +21,21 @@ export namespace Components {
     }
     interface SpaTooltip {
         /**
-          * Tooltip background color
+          * Tooltip bg
          */
         "backgroundColor": string;
-        /**
-          * Tooltip source's height
-         */
-        "sourceHeight": number;
-        /**
-          * Tooltip source's width
-         */
-        "sourceWidth": number;
         /**
           * Tooltip alignment prop to where the tooltip will appear
          */
         "tooltipAlignment": string;
         /**
-          * Tooltip shown source
+          * Tooltip displayed state
          */
-        "tooltipSource": string;
+        "tooltipState": boolean;
+        /**
+          * Tooltip target element id
+         */
+        "tooltipTarget": string;
         /**
           * Tooltip content text
          */
@@ -87,25 +83,21 @@ declare namespace LocalJSX {
     }
     interface SpaTooltip {
         /**
-          * Tooltip background color
+          * Tooltip bg
          */
         "backgroundColor"?: string;
-        /**
-          * Tooltip source's height
-         */
-        "sourceHeight"?: number;
-        /**
-          * Tooltip source's width
-         */
-        "sourceWidth"?: number;
         /**
           * Tooltip alignment prop to where the tooltip will appear
          */
         "tooltipAlignment"?: string;
         /**
-          * Tooltip shown source
+          * Tooltip displayed state
          */
-        "tooltipSource"?: string;
+        "tooltipState"?: boolean;
+        /**
+          * Tooltip target element id
+         */
+        "tooltipTarget"?: string;
         /**
           * Tooltip content text
          */

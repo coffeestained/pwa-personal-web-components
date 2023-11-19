@@ -7,14 +7,13 @@
 
 ## Properties
 
-| Property           | Attribute           | Description                                             | Type     | Default                                                 |
-| ------------------ | ------------------- | ------------------------------------------------------- | -------- | ------------------------------------------------------- |
-| `backgroundColor`  | `background-color`  | Tooltip background color                                | `string` | `"#000"`                                                |
-| `sourceHeight`     | `source-height`     | Tooltip source's height                                 | `number` | `undefined`                                             |
-| `sourceWidth`      | `source-width`      | Tooltip source's width                                  | `number` | `undefined`                                             |
-| `tooltipAlignment` | `tooltip-alignment` | Tooltip alignment prop to where the tooltip will appear | `string` | `"top"`                                                 |
-| `tooltipSource`    | `tooltip-source`    | Tooltip shown source                                    | `string` | `"https://image.flaticon.com/icons/svg/157/157933.svg"` |
-| `tooltipText`      | `tooltip-text`      | Tooltip content text                                    | `string` | `"Tooltip"`                                             |
+| Property           | Attribute           | Description                                             | Type      | Default     |
+| ------------------ | ------------------- | ------------------------------------------------------- | --------- | ----------- |
+| `backgroundColor`  | `background-color`  | Tooltip bg                                              | `string`  | `"#000"`    |
+| `tooltipAlignment` | `tooltip-alignment` | Tooltip alignment prop to where the tooltip will appear | `string`  | `"top"`     |
+| `tooltipState`     | `tooltip-state`     | Tooltip displayed state                                 | `boolean` | `true`      |
+| `tooltipTarget`    | `tooltip-target`    | Tooltip target element id                               | `string`  | `""`        |
+| `tooltipText`      | `tooltip-text`      | Tooltip content text                                    | `string`  | `"Tooltip"` |
 
 
 ----------------------------------------------
