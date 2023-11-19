@@ -59,10 +59,12 @@ export class SpaTooltip {
   }
 
   _hide() {
+    console.log('doing the thing')
     this.tooltipState = false;
   }
 
   _show() {
+    console.log('doing the thing')
     this.tooltipState = true;
   }
 
@@ -70,12 +72,14 @@ export class SpaTooltip {
     console.log(this.tooltipTarget)
     if (this.tooltipTarget) {
       const element = document.getElementById(this.tooltipTarget);
+      console.log(element)
       if (element) {
         element.addEventListener('focus', this._show);
         element.addEventListener('blur', this._hide);
         element.addEventListener('mouseenter', this._show);
         element.addEventListener('mouseleave', this._hide);
-         return true;
+        console.log(element)
+        return true;
       }
       return false;
     }
