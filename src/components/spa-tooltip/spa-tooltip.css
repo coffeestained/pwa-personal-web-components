@@ -39,10 +39,6 @@
   -webkit-transform: translate(0, -50%);
 }
 
-.tooltip:hover .left {
-  display: block;
-}
-
 .tooltip .left i {
   top: 50%;
   left: 100%;
@@ -69,9 +65,6 @@
 /*                          Tooltip Top Alignment CSS                         */
 /* -------------------------------------------------------------------------- */
 
-.tooltip:hover .top {
-  display: block;
-}
 
 .tooltip .top {
   left: 50%;
@@ -122,7 +115,6 @@
 .tooltip .right {
   top: 50%;
   left: 100%;
-  opacity: 0;
   padding: 2px;
   color: #fff;
   font-size: 13px;
@@ -130,7 +122,6 @@
   min-height: 50px;
   margin-left: 20px;
   z-index: 99999999;
-  visibility: hidden;
   position: absolute;
   text-align: center;
   border-radius: 8px;
@@ -140,11 +131,6 @@
   transition: opacity 0.8s;
   transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
-}
-
-.tooltip:hover .right {
-  opacity: 1;
-  visibility: visible;
 }
 
 .tooltip .right img {
@@ -178,7 +164,6 @@
 
 .tooltip .bottom {
   left: 50%;
-  opacity: 0;
   padding: 3px;
   color: #fff;
   font-size: 13px;
@@ -186,7 +171,6 @@
   min-width: 125px;
   min-height: 50px;
   z-index: 99999999;
-  visibility: hidden;
   position: absolute;
   text-align: center;
   border-radius: 8px;
@@ -200,12 +184,6 @@
 
 .tooltip .shadow {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-}
-
-.tooltip:hover .bottom {
-  opacity: 1;
-  display: block;
-  visibility: visible;
 }
 
 .tooltip .bottom i {
@@ -228,6 +206,6 @@
   transform: translate(-50%, 50%) rotate(45deg);
 }
 
-.tooltip.hide {
+.hide {
   display: none;
 }
