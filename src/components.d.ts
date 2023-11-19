@@ -19,6 +19,32 @@ export namespace Components {
          */
         "logostyle": "short" | "full";
     }
+    interface SpaTooltip {
+        /**
+          * Tooltip background color
+         */
+        "backgroundColor": string;
+        /**
+          * Tooltip source's height
+         */
+        "sourceHeight": number;
+        /**
+          * Tooltip source's width
+         */
+        "sourceWidth": number;
+        /**
+          * Tooltip alignment prop to where the tooltip will appear
+         */
+        "tooltipAlignment": string;
+        /**
+          * Tooltip shown source
+         */
+        "tooltipSource": string;
+        /**
+          * Tooltip content text
+         */
+        "tooltipText": string;
+    }
 }
 declare global {
     interface HTMLSpaLogoElement extends Components.SpaLogo, HTMLStencilElement {
@@ -33,9 +59,16 @@ declare global {
         prototype: HTMLSpaTextLogoElement;
         new (): HTMLSpaTextLogoElement;
     };
+    interface HTMLSpaTooltipElement extends Components.SpaTooltip, HTMLStencilElement {
+    }
+    var HTMLSpaTooltipElement: {
+        prototype: HTMLSpaTooltipElement;
+        new (): HTMLSpaTooltipElement;
+    };
     interface HTMLElementTagNameMap {
         "spa-logo": HTMLSpaLogoElement;
         "spa-text-logo": HTMLSpaTextLogoElement;
+        "spa-tooltip": HTMLSpaTooltipElement;
     }
 }
 declare namespace LocalJSX {
@@ -52,9 +85,36 @@ declare namespace LocalJSX {
          */
         "logostyle"?: "short" | "full";
     }
+    interface SpaTooltip {
+        /**
+          * Tooltip background color
+         */
+        "backgroundColor"?: string;
+        /**
+          * Tooltip source's height
+         */
+        "sourceHeight"?: number;
+        /**
+          * Tooltip source's width
+         */
+        "sourceWidth"?: number;
+        /**
+          * Tooltip alignment prop to where the tooltip will appear
+         */
+        "tooltipAlignment"?: string;
+        /**
+          * Tooltip shown source
+         */
+        "tooltipSource"?: string;
+        /**
+          * Tooltip content text
+         */
+        "tooltipText"?: string;
+    }
     interface IntrinsicElements {
         "spa-logo": SpaLogo;
         "spa-text-logo": SpaTextLogo;
+        "spa-tooltip": SpaTooltip;
     }
 }
 export { LocalJSX as JSX };
@@ -63,6 +123,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "spa-logo": LocalJSX.SpaLogo & JSXBase.HTMLAttributes<HTMLSpaLogoElement>;
             "spa-text-logo": LocalJSX.SpaTextLogo & JSXBase.HTMLAttributes<HTMLSpaTextLogoElement>;
+            "spa-tooltip": LocalJSX.SpaTooltip & JSXBase.HTMLAttributes<HTMLSpaTooltipElement>;
         }
     }
 }
