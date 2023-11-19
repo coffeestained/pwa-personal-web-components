@@ -7,27 +7,27 @@ import { Component, Prop, State, h } from '@stencil/core';
 })
 export class SpaTooltip {
   /**
-   * Tooltip displayed state
+   * Tooltip state
    */
-  @State() tooltipState: boolean = false;
+  @Prop({ mutable: true }) tooltipState: boolean = false;
 
   /**
-   * Tooltip target element id
+   * Tooltip target
    */
   @Prop({ mutable: true }) tooltipTarget: string = "";
 
   /**
-   * Tooltip content text
+   * Tooltip content
    */
   @Prop({ mutable: true }) tooltipText: string = "Tooltip";
 
   /**
-   * Tooltip alignment prop to where the tooltip will appear
+   * Tooltip alignment
    */
   @Prop({ mutable: true }) tooltipAlignment: string = "top";
 
   /**
-   * Tooltip bg
+   * Tooltip background
    */
   @Prop({ mutable: true }) backgroundColor: string = "#000";
 
@@ -41,8 +41,11 @@ export class SpaTooltip {
     this._isRegistered = this._registerListeners();
   }
 
-  componentShouldUpdate(prev, cur, state) {
-    console.log(prev,cur, state);
+  componentShouldUpdate(prev, cur, prop) {
+    // This method triggers on a prop or state changing.
+    // It provides the previousVal, currentVal and prop name that are
+    // being changed. And so we can validate re-renders here if needed.
+    // For now returning true;
     return true;
   }
 
@@ -51,13 +54,22 @@ export class SpaTooltip {
       "background-color": `${this.backgroundColor}`
     };
 
+    const iconStyleCustomCSS: any = {
+      width: `10px`,
+      height: `10px`
+    };
+
     // Return element if register successful.
     // Otherwise no element.
-    console.log(this._isRegistered)
     if (this._isRegistered) {
-      console.log('is registered')
       return (
         <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
+                  <img
+            alt="icon"
+            class="icon-style"
+            style={iconStyleCustomCSS}
+            src=""
+          />
           <div
             class={`${this.tooltipAlignment}`}
             style={tooltipAlignmentCustomCSS}
@@ -72,27 +84,14 @@ export class SpaTooltip {
     return ("");
   }
 
-  _hide() {
-    console.log('doing the thing')
-    this.tooltipState = false;
-  }
-
-  _show() {
-    console.log('doing the thing')
-    this.tooltipState = true;
-  }
-
   _registerListeners() {
-    console.log(this.tooltipTarget)
     if (this.tooltipTarget) {
       const element = document.getElementById(this.tooltipTarget);
-      console.log('elementfound', element)
       if (element) {
         element.addEventListener('focus', () => this.tooltipState = true);
         element.addEventListener('blur', () => this.tooltipState = false);
         element.addEventListener('mouseenter', () => this.tooltipState = true);
         element.addEventListener('mouseleave', () => this.tooltipState = false);
-        console.log(element)
         return true;
       }
       return false;
