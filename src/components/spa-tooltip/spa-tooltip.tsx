@@ -7,6 +7,16 @@ import { Component, Prop, h } from '@stencil/core';
 })
 export class SpaTooltip {
   /**
+   * Tooltip displayed state
+   */
+  @Prop() tooltipState: boolean = true;
+
+  /**
+   * Tooltip target element id
+   */
+  @Prop() tooltipTarget: string = "";
+
+  /**
    * Tooltip content text
    */
   @Prop() tooltipText: string = "Tooltip";
@@ -17,44 +27,18 @@ export class SpaTooltip {
   @Prop() tooltipAlignment: string = "top";
 
   /**
-   * Tooltip background color
+   * Tooltip bg
    */
   @Prop() backgroundColor: string = "#000";
-
-  /**
-   * Tooltip shown source
-   */
-  @Prop() tooltipSource: string =
-    "https://image.flaticon.com/icons/svg/157/157933.svg";
-
-  /**
-   * Tooltip source's width
-   */
-  @Prop() sourceWidth: number;
-
-  /**
-   * Tooltip source's height
-   */
-  @Prop() sourceHeight: number;
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background-color": `${this.backgroundColor}`
     };
 
-    const iconStyleCustomCSS: any = {
-      width: `${this.sourceWidth}px`,
-      height: `${this.sourceHeight}px`
-    };
 
     return (
-      <div class="tooltip">
-        <img
-          alt="icon"
-          class="icon-style"
-          style={iconStyleCustomCSS}
-          src={`${this.tooltipSource}`}
-        />
+      <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
         <div
           class={`${this.tooltipAlignment}`}
           style={tooltipAlignmentCustomCSS}
@@ -65,5 +49,25 @@ export class SpaTooltip {
         </div>
       </div>
     );
+  }
+
+  _hide() {
+    this.tooltipState = false;
+  }
+
+  _show() {
+    this.tooltipState = true;
+  }
+
+  _registerListeners() {
+    if (this.tooltipTarget) {
+      const element = document.getElementById(this.tooltipTarget);
+      if (element) {
+        element.addEventListener('focus', this._show);
+        element.addEventListener('blur', this._hide);
+        element.addEventListener('mouseenter', this._show);
+        element.addEventListener('mouseleave', this._hide);
+      }
+    }
   }
 }

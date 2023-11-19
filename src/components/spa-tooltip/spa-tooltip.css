@@ -227,3 +227,7 @@
   background-color: black;
   transform: translate(-50%, 50%) rotate(45deg);
 }
+
+.tooltip.hide {
+  display: none;
+}
