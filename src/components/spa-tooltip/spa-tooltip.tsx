@@ -48,6 +48,7 @@ export class SpaTooltip {
 
     // Return element if register successful.
     // Otherwise no element.
+    console.log(this._isRegistered)
     if (this._isRegistered) {
       console.log('is registered')
       return (
@@ -80,7 +81,7 @@ export class SpaTooltip {
     console.log(this.tooltipTarget)
     if (this.tooltipTarget) {
       const element = document.getElementById(this.tooltipTarget);
-      console.log(element)
+      console.log('elementfound', element)
       if (element) {
         element.addEventListener('focus', this._show);
         element.addEventListener('blur', this._hide);
