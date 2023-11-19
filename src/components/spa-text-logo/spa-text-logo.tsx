@@ -11,10 +11,9 @@ export class SpaTextLogo {
    */
   @Prop() logostyle: "short" | "full" = "short";
   @Prop() container: "" | "square" = "";
-  @Prop() animation: false | "border1";
-  _animations: "border1";
+  @Prop() animation: false | "border1" | "border2";
 
   render() {
-    return <span class={this.container}>{this.logostyle === "short" ? "ts" : "tillie studios"}</span>;
+    return <span class={`${this.container} ${this.animation ? this.animation : ""}`}>{this.logostyle === "short" ? "ts" : "tillie studios"}</span>;
   }
 }
