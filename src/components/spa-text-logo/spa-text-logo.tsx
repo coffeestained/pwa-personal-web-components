@@ -2,7 +2,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'spa-text-logo',
-  styleUrl: 'spa-text-logo.css',
+  styleUrl: 'spa-text-logo.scss',
   shadow: true,
 })
 export class SpaTextLogo {
