@@ -13,7 +13,6 @@ export namespace Components {
         "src": string;
     }
     interface SpaTextLogo {
-        "animation": false | "border1" | "border2";
         "container": "" | "square";
         /**
           * The logo style
@@ -80,7 +79,6 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface SpaTextLogo {
-        "animation"?: false | "border1" | "border2";
         "container"?: "" | "square";
         /**
           * The logo style
