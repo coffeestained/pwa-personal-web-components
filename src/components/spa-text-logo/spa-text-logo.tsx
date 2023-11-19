@@ -14,6 +14,6 @@ export class SpaTextLogo {
   @Prop() animation: false | "border1" | "border2";
 
   render() {
-    return <span class={`${this.container} ${this.animation ? this.animation : ""}`}>{this.logostyle === "short" ? "ts" : "tillie studios"}</span>;
+    return <span class={`${this.container} ${this.animation ? this.animation : ""}`}><span>{this.logostyle === "short" ? "ts" : "tillie studios"}</span></span>;
   }
 }
