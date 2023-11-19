@@ -9,45 +9,47 @@ export class SpaTooltip {
   /**
    * Tooltip displayed state
    */
-  @Prop() tooltipState: boolean = false;
+  @Prop({ mutable: true }) tooltipState: boolean = false;
 
   /**
    * Tooltip target element id
    */
-  @Prop() tooltipTarget: string = "";
+  @Prop({ mutable: true }) tooltipTarget: string = "";
 
   /**
    * Tooltip content text
    */
-  @Prop() tooltipText: string = "Tooltip";
+  @Prop({ mutable: true }) tooltipText: string = "Tooltip";
 
   /**
    * Tooltip alignment prop to where the tooltip will appear
    */
-  @Prop() tooltipAlignment: string = "top";
+  @Prop({ mutable: true }) tooltipAlignment: string = "top";
 
   /**
    * Tooltip bg
    */
-  @Prop() backgroundColor: string = "#000";
+  @Prop({ mutable: true }) backgroundColor: string = "#000";
 
   /**
-   * Watch for state  / text changes
+   * Registered State
    */
-  @Watch('tooltipState')
-  @Watch('tooltipText')
+  _isRegistered = false;
+
+  componentWillLoad(){
+    // Register Listeners
+    this._isRegistered = this._registerListeners();
+  }
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background-color": `${this.backgroundColor}`
     };
 
-    // Register Listeners
-    const registered = this._registerListeners();
-
     // Return element if register successful.
     // Otherwise no element.
-    if (registered) {
+    if (this._isRegistered) {
+      console.log('is registered')
       return (
         <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
           <div
