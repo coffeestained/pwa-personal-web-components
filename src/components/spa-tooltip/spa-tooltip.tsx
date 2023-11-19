@@ -1,4 +1,4 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'spa-tooltip',
@@ -41,23 +41,23 @@ export class SpaTooltip {
     this._isRegistered = this._registerListeners();
   }
 
-  componentShouldUpdate(prev, cur, prop) {
-    // This method triggers on a prop or state changing.
-    // It provides the previousVal, currentVal and prop name that are
-    // being changed. And so we can validate re-renders here if needed.
-    // For now returning true;
-    return true;
-  }
+  // componentShouldUpdate(prev, cur, prop) {
+  //   // This method triggers on a prop or state changing.
+  //   // It provides the previousVal, currentVal and prop name that are
+  //   // being changed. And so we can validate re-renders here if needed.
+  //   // For now returning true;
+  //   return true;
+  // }
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background-color": `${this.backgroundColor}`
     };
 
-    const iconStyleCustomCSS: any = {
-      width: `10px`,
-      height: `10px`
-    };
+    // const iconStyleCustomCSS: any = {
+    //   width: `10px`,
+    //   height: `10px`
+    // };
 
     // Return element if register successful.
     // Otherwise no element.
