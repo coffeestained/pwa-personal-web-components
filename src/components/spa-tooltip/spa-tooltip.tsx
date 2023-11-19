@@ -54,11 +54,6 @@ export class SpaTooltip {
       "background-color": `${this.backgroundColor}`
     };
 
-    // const iconStyleCustomCSS: any = {
-    //   width: `10px`,
-    //   height: `10px`
-    // };
-
     // Return element if register successful.
     // Otherwise no element.
     if (this._isRegistered) {
@@ -86,6 +81,18 @@ export class SpaTooltip {
         element.addEventListener('blur', () => this.tooltipState = false);
         element.addEventListener('mouseenter', () => this.tooltipState = true);
         element.addEventListener('mouseleave', () => this.tooltipState = false);
+
+        // Initial Position
+        const rect = element.getBoundingClientRect();
+        console.log(rect.top, rect.right, rect.bottom, rect.left);
+
+        // Resize Listener
+        window.addEventListener('resize', () => {
+          const rect = element.getBoundingClientRect();
+          console.log(rect.top, rect.right, rect.bottom, rect.left);
+          console.log('listening')
+        }, true);
+
         return true;
       }
       return false;
