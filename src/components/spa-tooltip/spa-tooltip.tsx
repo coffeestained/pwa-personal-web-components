@@ -32,6 +32,11 @@ export class SpaTooltip {
   @Prop({ mutable: true }) backgroundColor: string = "#000";
 
   /**
+   * Tooltip position
+   */
+    @Prop({ mutable: true }) tooltipPosition?: { top: number, left: number };
+
+  /**
    * Registered State
    */
   _isRegistered = false;
@@ -83,14 +88,11 @@ export class SpaTooltip {
         element.addEventListener('mouseleave', () => this.tooltipState = false);
 
         // Initial Position
-        const rect = element.getBoundingClientRect();
-        console.log(rect.top, rect.right, rect.bottom, rect.left);
+        this._updatePosition(element);
 
         // Resize Listener
         window.addEventListener('resize', () => {
-          const rect = element.getBoundingClientRect();
-          console.log(rect.top, rect.right, rect.bottom, rect.left);
-          console.log('listening')
+          this._updatePosition(element);
         }, true);
 
         return true;
@@ -98,4 +100,14 @@ export class SpaTooltip {
       return false;
     }
   }
+
+  _updatePosition(element) {
+    const rect = element.getBoundingClientRect();
+    this.tooltipPosition = {
+      left: rect.left + window.scrollX,
+      top: rect.top + window.scrollY
+    }
+    console.log(this.tooltipPosition)
+  }
 }
+

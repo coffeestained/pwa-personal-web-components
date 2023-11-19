@@ -29,6 +29,10 @@ export namespace Components {
          */
         "tooltipAlignment": string;
         /**
+          * Tooltip position
+         */
+        "tooltipPosition"?: { top: number, left: number };
+        /**
           * Tooltip state
          */
         "tooltipState": boolean;
@@ -90,6 +94,10 @@ declare namespace LocalJSX {
           * Tooltip alignment
          */
         "tooltipAlignment"?: string;
+        /**
+          * Tooltip position
+         */
+        "tooltipPosition"?: { top: number, left: number };
         /**
           * Tooltip state
          */
