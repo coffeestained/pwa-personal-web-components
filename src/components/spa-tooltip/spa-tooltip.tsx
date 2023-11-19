@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'spa-tooltip',
@@ -9,7 +9,7 @@ export class SpaTooltip {
   /**
    * Tooltip displayed state
    */
-  @Prop({ mutable: true }) tooltipState: boolean = false;
+  @State() tooltipState: boolean = false;
 
   /**
    * Tooltip target element id

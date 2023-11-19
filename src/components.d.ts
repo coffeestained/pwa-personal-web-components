@@ -29,10 +29,6 @@ export namespace Components {
          */
         "tooltipAlignment": string;
         /**
-          * Tooltip displayed state
-         */
-        "tooltipState": boolean;
-        /**
           * Tooltip target element id
          */
         "tooltipTarget": string;
@@ -90,10 +86,6 @@ declare namespace LocalJSX {
           * Tooltip alignment prop to where the tooltip will appear
          */
         "tooltipAlignment"?: string;
-        /**
-          * Tooltip displayed state
-         */
-        "tooltipState"?: boolean;
         /**
           * Tooltip target element id
          */
