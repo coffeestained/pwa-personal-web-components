@@ -128,7 +128,6 @@
   font-weight: normal;
   box-sizing: border-box;
   background-color: black;
-  transition: opacity 0.8s;
   transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
 }
@@ -177,7 +176,7 @@
   font-weight: normal;
   box-sizing: border-box;
   background-color: black;
-  transition: opacity 0.8s;
+
   transform: translate(-50%, 0);
   -webkit-box-sizing: border-box;
 }
@@ -206,6 +205,13 @@
   transform: translate(-50%, 50%) rotate(45deg);
 }
 
+.tooltip div {
+  transition: opacity 800ms;
+  visibility: visible;
+  opacity: 1;
+}
+
 .hide {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
