@@ -56,7 +56,9 @@ export class SpaTooltip {
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
-      "background-color": `${this.backgroundColor}`
+      "background-color": `${this.backgroundColor}`,
+      position: "fixed",
+      ...this.tooltipPosition
     };
 
     // Return element if register successful.
