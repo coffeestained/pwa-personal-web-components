@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, Watch, h } from '@stencil/core';
 
 @Component({
   tag: 'spa-tooltip',
@@ -30,6 +30,12 @@ export class SpaTooltip {
    * Tooltip bg
    */
   @Prop() backgroundColor: string = "#000";
+
+  /**
+   * Watch for state  / text changes
+   */
+  @Watch('tooltipState')
+  @Watch('tooltipText')
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
