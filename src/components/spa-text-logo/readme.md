@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute   | Description    | Type                | Default   |
-| ----------- | ----------- | -------------- | ------------------- | --------- |
-| `container` | `container` |                | `"" \| "square"`    | `""`      |
-| `logostyle` | `logostyle` | The logo style | `"full" \| "short"` | `"short"` |
+| Property    | Attribute   | Description    | Type                   | Default     |
+| ----------- | ----------- | -------------- | ---------------------- | ----------- |
+| `animation` | `animation` |                | `"border1" \| boolean` | `undefined` |
+| `container` | `container` |                | `"" \| "square"`       | `""`        |
+| `logostyle` | `logostyle` | The logo style | `"full" \| "short"`    | `"short"`   |
 
 
 ----------------------------------------------

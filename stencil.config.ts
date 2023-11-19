@@ -1,10 +1,13 @@
 import { Config } from '@stencil/core';
 import { angularOutputTarget } from '@stencil/angular-output-target';
-
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'web-components',
   globalStyle: 'src/global/global.css',
+  plugins: [
+    sass()
+  ],
   outputTargets: [
     {
       type: 'dist',
