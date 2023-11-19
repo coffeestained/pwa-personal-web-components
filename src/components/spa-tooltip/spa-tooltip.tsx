@@ -31,10 +31,10 @@ export class SpaTooltip {
    */
   @Prop({ mutable: true }) backgroundColor: string = "#000";
 
-  /**
-   * Tooltip position
-   */
-    @Prop({ mutable: true }) tooltipPosition?: { top: number, left: number };
+/**
+ * Tooltip position
+ */
+  @Prop({ mutable: true }) tooltipPosition?: { top: number, left: number };
 
   /**
    * Registered State
