@@ -41,6 +41,11 @@ export class SpaTooltip {
     this._isRegistered = this._registerListeners();
   }
 
+  componentShouldUpdate(prev, cur, state) {
+    console.log(prev,cur, state);
+    return true;
+  }
+
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background-color": `${this.backgroundColor}`
