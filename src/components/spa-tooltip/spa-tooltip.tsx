@@ -63,15 +63,9 @@ export class SpaTooltip {
     // Otherwise no element.
     if (this._isRegistered) {
       return (
-        <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
-                  <img
-            alt="icon"
-            class="icon-style"
-            style={iconStyleCustomCSS}
-            src=""
-          />
+        <div class={`tooltip`}>
           <div
-            class={`${this.tooltipAlignment}`}
+            class={`${this.tooltipAlignment} ${this.tooltipState ? "" : "hide"}`}
             style={tooltipAlignmentCustomCSS}
           >
             <h3>{this.tooltipText}</h3>
