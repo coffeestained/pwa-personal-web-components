@@ -88,10 +88,10 @@ export class SpaTooltip {
       const element = document.getElementById(this.tooltipTarget);
       console.log('elementfound', element)
       if (element) {
-        element.addEventListener('focus', this._show);
-        element.addEventListener('blur', this._hide);
-        element.addEventListener('mouseenter', this._show);
-        element.addEventListener('mouseleave', this._hide);
+        element.addEventListener('focus', () => this.tooltipState = true);
+        element.addEventListener('blur', () => this.tooltipState = false);
+        element.addEventListener('mouseenter', () => this.tooltipState = true);
+        element.addEventListener('mouseleave', () => this.tooltipState = false);
         console.log(element)
         return true;
       }
