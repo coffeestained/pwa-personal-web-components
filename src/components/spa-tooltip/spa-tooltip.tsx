@@ -9,7 +9,7 @@ export class SpaTooltip {
   /**
    * Tooltip displayed state
    */
-  @Prop() tooltipState: boolean = true;
+  @Prop() tooltipState: boolean = false;
 
   /**
    * Tooltip target element id
@@ -36,19 +36,26 @@ export class SpaTooltip {
       "background-color": `${this.backgroundColor}`
     };
 
+    // Register Listeners
+    const registered = this._registerListeners();
 
-    return (
-      <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
-        <div
-          class={`${this.tooltipAlignment}`}
-          style={tooltipAlignmentCustomCSS}
-        >
-          <h3>{this.tooltipText}</h3>
-          <i></i> {/* ! CREATES THE TOOLTIP POINTER ! */}
-          <slot />
+    // Return element if register successful.
+    // Otherwise no element.
+    if (registered) {
+      return (
+        <div class={`tooltip ${this.tooltipState ? "" : "hide"}`}>
+          <div
+            class={`${this.tooltipAlignment}`}
+            style={tooltipAlignmentCustomCSS}
+          >
+            <h3>{this.tooltipText}</h3>
+            <i></i> {/* ! CREATES THE TOOLTIP POINTER ! */}
+            <slot />
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
+    return ("");
   }
 
   _hide() {
@@ -60,6 +67,7 @@ export class SpaTooltip {
   }
 
   _registerListeners() {
+    console.log(this.tooltipTarget)
     if (this.tooltipTarget) {
       const element = document.getElementById(this.tooltipTarget);
       if (element) {
@@ -67,7 +75,9 @@ export class SpaTooltip {
         element.addEventListener('blur', this._hide);
         element.addEventListener('mouseenter', this._show);
         element.addEventListener('mouseleave', this._hide);
+         return true;
       }
+      return false;
     }
   }
 }
