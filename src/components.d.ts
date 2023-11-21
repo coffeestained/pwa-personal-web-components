@@ -7,12 +7,12 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface SpaButton {
+        "buttonColoring": "primaryColor" | "secondaryColor";
+        "buttonStyle": "primaryStyle" | "secondaryStyle";
         /**
           * The button callback
          */
         "callback": () => void;
-        "coloring": "primaryColor" | "secondaryColor";
-        "style": "primaryStyle" | "secondaryStyle";
     }
     interface SpaLogo {
         /**
@@ -88,12 +88,12 @@ declare global {
 }
 declare namespace LocalJSX {
     interface SpaButton {
+        "buttonColoring"?: "primaryColor" | "secondaryColor";
+        "buttonStyle"?: "primaryStyle" | "secondaryStyle";
         /**
           * The button callback
          */
         "callback"?: () => void;
-        "coloring"?: "primaryColor" | "secondaryColor";
-        "style"?: "primaryStyle" | "secondaryStyle";
     }
     interface SpaLogo {
         /**

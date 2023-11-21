@@ -10,12 +10,12 @@ export class SpaButton {
    * The button callback
    */
   @Prop() callback: () => void;
-  @Prop() coloring: "primaryColor" | "secondaryColor" = "primaryColor";
-  @Prop() style: "primaryStyle" | "secondaryStyle" = "primaryStyle";
+  @Prop() buttonColoring: "primaryColor" | "secondaryColor" = "primaryColor";
+  @Prop() buttonStyle: "primaryStyle" | "secondaryStyle" = "primaryStyle";
 
   render() {
     return (
-      <button class={this.coloring + " " + this.style} onClick={this.callback}>
+      <button class={this.buttonColoring + " " + this.buttonStyle} onClick={this.callback}>
 
       </button>
     );
