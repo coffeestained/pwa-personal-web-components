@@ -10,6 +10,15 @@ button {
   padding: 10px 5px;
   border-radius: 2.5px;
   border: 1 solid var(--theme-text-neutral);
+  transition: all .1s;
+
+  &:hover {
+    transform: scale(.97);
+  }
+
+  &:active {
+    transform: scale(.94);
+  }
 }
 
 .primaryColor {
@@ -21,6 +30,15 @@ button {
   padding: 10px 5px;
   border-radius: 2.5px;
   border: 1 solid var(--theme-text-neutral);
+  transition: all .1s;
+
+  &:hover {
+    transform: scale(.97);
+  }
+
+  &:active {
+    transform: scale(.94);
+  }
 
   &::before {
     content: "";
