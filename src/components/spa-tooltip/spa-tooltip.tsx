@@ -109,8 +109,8 @@ export class SpaTooltip {
 
     console.log(rect, window)
     this.tooltipPosition = {
-      left: rect.left + window.scrollX + "px",
-      top: rect.top + window.scrollY + "px"
+      left: rect.left + "px",
+      top: rect.top + "px"
     }
     console.log(this.tooltipPosition)
   }
