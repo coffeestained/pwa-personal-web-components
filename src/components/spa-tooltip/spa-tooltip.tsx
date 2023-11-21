@@ -105,10 +105,14 @@ export class SpaTooltip {
 
   _updatePosition(element) {
     const rect = element.getBoundingClientRect();
+    const bodyRect = document.body.getBoundingClientRect();
+    const offsetTop = rect.top - bodyRect.top;
+    const offsetLeft = rect.left - bodyRect.left;
+
     console.log(rect, window)
     this.tooltipPosition = {
-      left: rect.left + window.scrollX,
-      top: rect.top + window.scrollY
+      left: offsetLeft,
+      top: offsetTop
     }
     console.log(this.tooltipPosition)
   }
