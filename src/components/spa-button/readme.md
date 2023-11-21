@@ -7,13 +7,13 @@
 
 ## Properties
 
-| Property         | Attribute         | Description         | Type                                 | Default          |
-| ---------------- | ----------------- | ------------------- | ------------------------------------ | ---------------- |
-| `buttonColoring` | `button-coloring` |                     | `"primaryColor" \| "secondaryColor"` | `"primaryColor"` |
-| `buttonStyle`    | `button-style`    |                     | `"primaryStyle" \| "secondaryStyle"` | `"primaryStyle"` |
-| `callback`       | --                | The button callback | `() => void`                         | `undefined`      |
-| `icon`           | `icon`            |                     | `string`                             | `null`           |
-| `text`           | `text`            |                     | `string`                             | `"Button"`       |
+| Property         | Attribute        | Description         | Type                                 | Default          |
+| ---------------- | ---------------- | ------------------- | ------------------------------------ | ---------------- |
+| `buttoncoloring` | `buttoncoloring` |                     | `"primaryColor" \| "secondaryColor"` | `"primaryColor"` |
+| `buttonstyle`    | `buttonstyle`    |                     | `"primaryStyle" \| "secondaryStyle"` | `"primaryStyle"` |
+| `callback`       | --               | The button callback | `() => void`                         | `undefined`      |
+| `icon`           | `icon`           |                     | `string`                             | `null`           |
+| `text`           | `text`           |                     | `string`                             | `"Button"`       |
 
 
 ----------------------------------------------

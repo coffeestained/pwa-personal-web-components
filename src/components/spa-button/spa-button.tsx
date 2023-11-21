@@ -10,15 +10,15 @@ export class SpaButton {
    * The button callback
    */
   @Prop() callback: () => void;
-  @Prop() buttonColoring: "primaryColor" | "secondaryColor" = "primaryColor";
-  @Prop() buttonStyle: "primaryStyle" | "secondaryStyle" = "primaryStyle";
+  @Prop() buttoncoloring: "primaryColor" | "secondaryColor" = "primaryColor";
+  @Prop() buttonstyle: "primaryStyle" | "secondaryStyle" = "primaryStyle";
 
   @Prop() icon: null | string = null;
   @Prop() text: string = "Button";
 
   render() {
     return (
-      <button class={this.buttonColoring + " " + this.buttonStyle} onClick={this.callback}>
+      <button class={this.buttoncoloring + " " + this.buttonstyle} onClick={this.callback}>
         {this.icon
           ? "" // TODO Icon Support
           : <span>{this.text}</span>
