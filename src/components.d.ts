@@ -6,6 +6,14 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface SpaButton {
+        /**
+          * The button callback
+         */
+        "callback": () => void;
+        "coloring": "primaryColor" | "secondaryColor";
+        "style": "primaryStyle" | "secondaryStyle";
+    }
     interface SpaLogo {
         /**
           * The logo src
@@ -47,6 +55,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLSpaButtonElement extends Components.SpaButton, HTMLStencilElement {
+    }
+    var HTMLSpaButtonElement: {
+        prototype: HTMLSpaButtonElement;
+        new (): HTMLSpaButtonElement;
+    };
     interface HTMLSpaLogoElement extends Components.SpaLogo, HTMLStencilElement {
     }
     var HTMLSpaLogoElement: {
@@ -66,12 +80,21 @@ declare global {
         new (): HTMLSpaTooltipElement;
     };
     interface HTMLElementTagNameMap {
+        "spa-button": HTMLSpaButtonElement;
         "spa-logo": HTMLSpaLogoElement;
         "spa-text-logo": HTMLSpaTextLogoElement;
         "spa-tooltip": HTMLSpaTooltipElement;
     }
 }
 declare namespace LocalJSX {
+    interface SpaButton {
+        /**
+          * The button callback
+         */
+        "callback"?: () => void;
+        "coloring"?: "primaryColor" | "secondaryColor";
+        "style"?: "primaryStyle" | "secondaryStyle";
+    }
     interface SpaLogo {
         /**
           * The logo src
@@ -112,6 +135,7 @@ declare namespace LocalJSX {
         "tooltipText"?: string;
     }
     interface IntrinsicElements {
+        "spa-button": SpaButton;
         "spa-logo": SpaLogo;
         "spa-text-logo": SpaTextLogo;
         "spa-tooltip": SpaTooltip;
@@ -121,6 +145,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "spa-button": LocalJSX.SpaButton & JSXBase.HTMLAttributes<HTMLSpaButtonElement>;
             "spa-logo": LocalJSX.SpaLogo & JSXBase.HTMLAttributes<HTMLSpaLogoElement>;
             "spa-text-logo": LocalJSX.SpaTextLogo & JSXBase.HTMLAttributes<HTMLSpaTextLogoElement>;
             "spa-tooltip": LocalJSX.SpaTooltip & JSXBase.HTMLAttributes<HTMLSpaTooltipElement>;
