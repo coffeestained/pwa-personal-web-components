@@ -105,7 +105,7 @@ export class SpaTooltip {
 
   _updatePosition(element) {
     const rect = element.getBoundingClientRect();
-    const bodyRect = document.body.getBoundingClientRect();
+    const bodyRect = document.querySelector('shell-root').getBoundingClientRect();
     const offsetTop = rect.top - bodyRect.top;
     const offsetLeft = rect.left - bodyRect.left;
 
