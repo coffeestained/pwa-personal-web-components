@@ -46,13 +46,14 @@ export class SpaTooltip {
     this._isRegistered = this._registerListeners();
   }
 
-  // componentShouldUpdate(prev, cur, prop) {
-  //   // This method triggers on a prop or state changing.
-  //   // It provides the previousVal, currentVal and prop name that are
-  //   // being changed. And so we can validate re-renders here if needed.
-  //   // For now returning true;
-  //   return true;
-  // }
+  componentShouldUpdate(prev, cur, prop) {
+    // This method triggers on a prop or state changing.
+    // It provides the previousVal, currentVal and prop name that are
+    // being changed. And so we can validate re-renders here if needed.
+    // For now returning true;
+    prev; cur; prop;
+    return true;
+  }
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
