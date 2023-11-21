@@ -66,8 +66,4 @@ button {
 .secondaryColor {
   color: var(--theme-text-for-gradient);
   background: var(--theme-gradient);
-
-  &::before {
-    content: "";
-  }
 }
