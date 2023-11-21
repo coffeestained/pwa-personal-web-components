@@ -61,7 +61,7 @@ export class SpaTooltip {
       position: "fixed",
       ...this.tooltipPosition
     };
-
+    console.log(tooltipAlignmentCustomCSS)
     // Return element if register successful.
     // Otherwise no element.
     if (this._isRegistered) {
