@@ -21,7 +21,7 @@ export class SpaButton {
       <button class={this.buttoncoloring + " " + this.buttonstyle} onClick={this.callback}>
         {this.icon
           ? "" // TODO Icon Support
-          : <span>{this.text}</span>
+          : <span class="button__text">{this.text}</span>
         }
       </button>
     );
