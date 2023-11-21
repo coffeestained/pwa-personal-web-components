@@ -13,6 +13,8 @@ export namespace Components {
           * The button callback
          */
         "callback": () => void;
+        "icon": null | string;
+        "text": string;
     }
     interface SpaLogo {
         /**
@@ -94,6 +96,8 @@ declare namespace LocalJSX {
           * The button callback
          */
         "callback"?: () => void;
+        "icon"?: null | string;
+        "text"?: string;
     }
     interface SpaLogo {
         /**

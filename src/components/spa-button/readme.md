@@ -12,6 +12,8 @@
 | `buttonColoring` | `button-coloring` |                     | `"primaryColor" \| "secondaryColor"` | `"primaryColor"` |
 | `buttonStyle`    | `button-style`    |                     | `"primaryStyle" \| "secondaryStyle"` | `"primaryStyle"` |
 | `callback`       | --                | The button callback | `() => void`                         | `undefined`      |
+| `icon`           | `icon`            |                     | `string`                             | `null`           |
+| `text`           | `text`            |                     | `string`                             | `"Button"`       |
 
 
 ----------------------------------------------
