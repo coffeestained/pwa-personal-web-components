@@ -46,14 +46,14 @@ export class SpaTooltip {
     this._isRegistered = this._registerListeners();
   }
 
-  componentShouldUpdate(prev, cur, prop) {
-    // This method triggers on a prop or state changing.
-    // It provides the previousVal, currentVal and prop name that are
-    // being changed. And so we can validate re-renders here if needed.
-    // For now returning true;
-    prev; cur; prop;
-    return true;
-  }
+  // componentShouldUpdate(prev, cur, prop) {
+  //   // This method triggers on a prop or state changing.
+  //   // It provides the previousVal, currentVal and prop name that are
+  //   // being changed. And so we can validate re-renders here if needed.
+  //   // For now returning true;
+  //   prev; cur; prop;
+  //   return true;
+  // }
 
   render() {
     const tooltipAlignmentCustomCSS: any = {
@@ -61,7 +61,6 @@ export class SpaTooltip {
       position: "fixed",
       ...this.tooltipPosition
     };
-    console.log(tooltipAlignmentCustomCSS)
     // Return element if register successful.
     // Otherwise no element.
     if (this._isRegistered) {
@@ -107,12 +106,10 @@ export class SpaTooltip {
   _updatePosition(element) {
     const rect = element.getBoundingClientRect();
 
-    console.log(rect, window)
     this.tooltipPosition = {
       left: rect.left + (rect.width / 2) + "px",
-      top: rect.top + (rect.height / 2) + "px"
+      top: rect.top + (rect.height) + "px"
     }
-    console.log(this.tooltipPosition)
   }
 }
 

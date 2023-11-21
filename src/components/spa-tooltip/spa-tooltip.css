@@ -24,8 +24,8 @@
   color: #fff;
   display: none;
   font-size: 13px;
-  min-width: 125px;
-  min-height: 50px;
+  min-width: 50px;
+  min-height: 25px;
   z-index: 99999999;
   margin-right: 20px;
   border-radius: 8px;
@@ -73,8 +73,8 @@
   color: #fff;
   display: none;
   font-size: 13px;
-  min-width: 125px;
-  min-height: 50px;
+  min-width: 50px;
+  min-height: 25px;
   z-index: 99999999;
   position: absolute;
   text-align: center;
@@ -118,8 +118,8 @@
   padding: 2px;
   color: #fff;
   font-size: 13px;
-  min-width: 125px;
-  min-height: 50px;
+  min-width: 50px;
+  min-height: 25px;
   margin-left: 20px;
   z-index: 99999999;
   position: absolute;
@@ -167,8 +167,8 @@
   color: #fff;
   font-size: 13px;
   margin-top: 15px;
-  min-width: 125px;
-  min-height: 50px;
+  min-width: 50px;
+  min-height: 25px;
   z-index: 99999999;
   position: absolute;
   text-align: center;
