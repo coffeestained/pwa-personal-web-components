@@ -21,9 +21,19 @@ button {
   padding: 10px 5px;
   border-radius: 2.5px;
   border: 1 solid var(--theme-text-neutral);
+
+  &::before {
+    content: "";
+
+  }
 }
 
 .secondaryColor {
   color: var(--theme-text-for-gradient);
   background: var(--theme-gradient);
+
+  &::before {
+    content: "";
+
+  }
 }
