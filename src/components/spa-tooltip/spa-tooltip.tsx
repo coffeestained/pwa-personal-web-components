@@ -97,6 +97,11 @@ export class SpaTooltip {
           this._updatePosition(element);
         }, true);
 
+        // Scroll Listener
+        window.addEventListener('scroll', () => {
+          this._updatePosition(element);
+        }, true);
+
         return true;
       }
       return false;
