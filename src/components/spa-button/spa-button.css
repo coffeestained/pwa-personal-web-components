@@ -13,11 +13,11 @@ button {
   transition: all .1s;
 
   &:hover {
-    transform: scale(.97);
+    transform: scale(.99);
   }
 
   &:active {
-    transform: scale(.94);
+    transform: scale(.97);
   }
 }
 
@@ -33,11 +33,11 @@ button {
   transition: all .1s;
 
   &:hover {
-    transform: scale(.97);
+    transform: scale(.99);
   }
 
   &:active {
-    transform: scale(.94);
+    transform: scale(.97);
   }
 
   &::before {
