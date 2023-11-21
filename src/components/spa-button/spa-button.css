@@ -1,3 +1,25 @@
 :host {
   display: block;
 }
+
+.primaryStyle {
+  padding: 10px 5px;
+  border-radius: 2.5px;
+  border: 1 solid var(--theme-text-neutral);
+}
+
+.primaryColor {
+  color: var(--theme-text-for-gradient);
+  background: var(--theme-gradient);
+}
+
+.secondaryStyle {
+  padding: 10px 5px;
+  border-radius: 2.5px;
+  border: 1 solid var(--theme-text-neutral);
+}
+
+.secondaryColor {
+  color: var(--theme-text-for-gradient);
+  background: var(--theme-gradient);
+}
