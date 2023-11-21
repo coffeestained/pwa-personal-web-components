@@ -38,15 +38,6 @@ button {
   border: 1 solid var(--theme-text-neutral);
   transition: all .1s;
 
-  span {
-    background: var(--theme-gradient);
-    background-image: var(--theme-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-  }
-
   &:hover {
     transform: scale(.99);
   }
@@ -66,4 +57,13 @@ button {
 .secondaryColor {
   color: var(--theme-text-for-gradient);
   background: var(--theme-gradient);
+}
+
+.secondaryStyle span {
+  background: var(--theme-gradient);
+  background-image: var(--theme-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
