@@ -41,7 +41,7 @@ export namespace Components {
         /**
           * Tooltip position
          */
-        "tooltipPosition"?: { top: number, left: number };
+        "tooltipPosition"?: { top: string, left: string };
         /**
           * Tooltip state
          */
@@ -124,7 +124,7 @@ declare namespace LocalJSX {
         /**
           * Tooltip position
          */
-        "tooltipPosition"?: { top: number, left: number };
+        "tooltipPosition"?: { top: string, left: string };
         /**
           * Tooltip state
          */

@@ -34,7 +34,7 @@ export class SpaTooltip {
 /**
  * Tooltip position
  */
-  @Prop({ mutable: true }) tooltipPosition?: { top: number, left: number };
+  @Prop({ mutable: true }) tooltipPosition?: { top: string, left: string };
 
   /**
    * Registered State
@@ -112,8 +112,8 @@ export class SpaTooltip {
 
     console.log(rect, window)
     this.tooltipPosition = {
-      left: offsetLeft,
-      top: offsetTop
+      left: offsetLeft + "px",
+      top: offsetTop + "px"
     }
     console.log(this.tooltipPosition)
   }
