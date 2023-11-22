@@ -29,7 +29,7 @@ export class SpaTooltip {
   /**
    * Tooltip background
    */
-  @Prop({ mutable: true }) backgroundColor: string = "#000";
+  @Prop({ mutable: true }) backgroundColor: string = "var(--theme-gradient, #000)";
 
 /**
  * Tooltip position
