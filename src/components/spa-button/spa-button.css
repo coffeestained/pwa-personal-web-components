@@ -13,7 +13,7 @@ button {
 }
 
 .primaryStyle {
-  padding: 10px 5px;
+  padding: 10px 25px;
   border-radius: 2.5px;
   border: 1 solid var(--theme-text-neutral);
   transition: all .1s;
@@ -33,7 +33,7 @@ button {
 }
 
 .secondaryStyle {
-  padding: 10px 5px;
+  padding: 10px 15px;
   border-radius: 2.5px;
   border: 1 solid var(--theme-text-neutral);
   transition: all .1s;
