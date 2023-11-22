@@ -21,7 +21,7 @@
   top: 50%;
   right: 100%;
   padding: 2px;
-  color: #fff;
+  color: var(--theme-text-for-gradient, #fff);
   display: none;
   font-size: 11px;
   min-width: 50px;
@@ -33,7 +33,7 @@
   font-weight: normal;
   text-align: center;
   box-sizing: border-box;
-  background-color: black;
+  background-color: var(--theme-gradient);
   transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
   -webkit-transform: translate(0, -50%);
@@ -70,7 +70,7 @@
   left: 50%;
   top: -20px;
   padding: 2px;
-  color: #fff;
+  color: var(--theme-text-for-gradient, #fff);
   display: none;
   font-size: 11px;
   min-width: 50px;
@@ -81,7 +81,7 @@
   border-radius: 8px;
   font-weight: normal;
   box-sizing: border-box;
-  background-color: black;
+  background-color: var(--theme-gradient);
   transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
   transform: translate(-30%, -100%);
@@ -116,7 +116,7 @@
   top: 50%;
   left: 100%;
   padding: 2px;
-  color: #fff;
+  color: var(--theme-text-for-gradient, #fff);
   font-size: 11px;
   min-width: 50px;
   min-height: 25px;
@@ -127,7 +127,7 @@
   border-radius: 8px;
   font-weight: normal;
   box-sizing: border-box;
-  background-color: black;
+  background-color: var(--theme-gradient);
   transform: translate(0, -50%);
   -webkit-box-sizing: border-box;
 }
@@ -153,7 +153,7 @@
   width: 12px;
   height: 12px;
   position: absolute;
-  background-color: black;
+  background-color: var(--theme-gradient);
   transform: translate(50%, -50%) rotate(-45deg);
 }
 
@@ -164,7 +164,7 @@
 .tooltip .bottom {
   left: 50%;
   padding: 3px;
-  color: #fff;
+  color: var(--theme-text-for-gradient, #fff);
   font-size: 11px;
   margin-top: 15px;
   min-width: 50px;
@@ -175,14 +175,14 @@
   border-radius: 8px;
   font-weight: normal;
   box-sizing: border-box;
-  background-color: black;
+  background-color: var(--theme-gradient, #000);
 
   transform: translate(-50%, 0);
   -webkit-box-sizing: border-box;
 }
 
 .tooltip .shadow {
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 }
 
 .tooltip .bottom i {
@@ -201,7 +201,7 @@
   width: 12px;
   height: 12px;
   position: absolute;
-  background-color: black;
+  background-color: var(--theme-gradient);
   transform: translate(-50%, 50%) rotate(45deg);
 }
 
