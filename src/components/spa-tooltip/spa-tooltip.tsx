@@ -58,7 +58,7 @@ export class SpaTooltip {
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background": `${this.backgroundColor}`,
-      position: "sticky",
+      position: "fixed",
       ...this.tooltipPosition
     };
     console.log(tooltipAlignmentCustomCSS)
@@ -111,17 +111,14 @@ export class SpaTooltip {
 
   _updatePosition(element) {
     // Get the top, left coordinates of two elements
-    const containerRect = document.getElementsByTagName('shell-root')[0].getBoundingClientRect();
     const targetRect = element.getBoundingClientRect();
 
     // Calculate the top and left positions
-    const top = targetRect.top - containerRect.top;
-    const left = targetRect.left - containerRect.left;
-    console.log(containerRect, targetRect, element.offsetLeft, element.offsetTop)
-    this.tooltipPosition = {
-      top: `${top.toString()}px`,
-      left: `${left.toString()}px`,
-    };
+
+    this.tooltipPosition =  {
+      left: targetRect.left + window.scrollX,
+      top: targetRect.top + window.scrollY
+    }
   }
 };
 
