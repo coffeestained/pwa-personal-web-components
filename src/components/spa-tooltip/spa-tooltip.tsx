@@ -58,7 +58,7 @@ export class SpaTooltip {
   render() {
     const tooltipAlignmentCustomCSS: any = {
       "background": `${this.backgroundColor}`,
-      position: "fixed",
+      position: "sticky",
       ...this.tooltipPosition
     };
     console.log(tooltipAlignmentCustomCSS)
