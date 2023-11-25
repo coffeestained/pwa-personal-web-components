@@ -110,11 +110,17 @@ export class SpaTooltip {
   }
 
   _updatePosition(element) {
-    let bound = element.getBoundingClientRect();
-    console.log(bound, element.offsetLeft, element.offsetTop)
+    // Get the top, left coordinates of two elements
+    const eleRect = document.getElementsByTagName('shell-root')[0].getBoundingClientRect();
+    const targetRect = element.getBoundingClientRect();
+
+    // Calculate the top and left positions
+    const top = eleRect.top - targetRect.top;
+    const left = eleRect.left - targetRect.left;
+    console.log(eleRect, targetRect, element.offsetLeft, element.offsetTop)
     this.tooltipPosition = {
-      top: `${bound.top.toString()}px`,
-      left: `${bound.left.toString()}px`,
+      top: `${top.toString()}px`,
+      left: `${left.toString()}px`,
     };
   }
 };
