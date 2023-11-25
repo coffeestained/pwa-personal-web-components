@@ -110,25 +110,11 @@ export class SpaTooltip {
   }
 
   _updatePosition(element) {
-    var top = 0,
-    left = 0;
     let bound = element.getBoundingClientRect();
-    do {
-      bound = element.getBoundingClientRect();
-      top += bound.top;
-      left += bound.left;
-      element = element.offsetParent;
-      if (element !== null) {
-        bound = element.getBoundingClientRect();
-        top -= bound.top - window.scrollY;
-        left -= bound.left - window.scrollX;
-      }
-    } while (element);
-
-    console.log(top, left, bound)
+    console.log(bound, element.offsetLeft, element.offsetTop)
     this.tooltipPosition = {
-      top: `${top.toString()}px`,
-      left: `${left.toString()}px`,
+      top: `${bound.top.toString()}px`,
+      left: `${bound.left.toString()}px`,
     };
   }
 };
