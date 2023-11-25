@@ -124,6 +124,7 @@ export class SpaTooltip {
       }
     } while (element);
 
+    console.log(top, left, bound)
     this.tooltipPosition = {
       top: top.toString(),
       left: left.toString(),
