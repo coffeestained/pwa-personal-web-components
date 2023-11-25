@@ -109,12 +109,26 @@ export class SpaTooltip {
   }
 
   _updatePosition(element) {
-    const rect = element.getBoundingClientRect();
+    var top = 0,
+    left = 0;
+    let bound = element.getBoundingClientRect();
+    do {
+      bound = element.getBoundingClientRect();
+      top += bound.top;
+      left += bound.left;
+      element = element.offsetParent;
+      if (element !== null) {
+        bound = element.getBoundingClientRect();
+        top -= bound.top - window.scrollY;
+        left -= bound.left - window.scrollX;
+      }
+    } while (element);
 
     this.tooltipPosition = {
-      left: rect.left + (rect.width / 2) + "px",
-      top: rect.top + (rect.height) + "px"
-    }
+      top: top.toString(),
+      left: left.toString(),
+    };
   }
-}
+};
+
 
