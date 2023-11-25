@@ -116,8 +116,8 @@ export class SpaTooltip {
     // Calculate the top and left positions
 
     this.tooltipPosition =  {
-      left: targetRect.left + window.scrollX + "px",
-      top: targetRect.top + window.scrollY + "px"
+      left: targetRect.left + "px",
+      top: targetRect.top + "px"
     }
   }
 };
